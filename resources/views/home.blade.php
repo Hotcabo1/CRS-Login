@@ -1,4 +1,4 @@
-@extends('layouts.theme.app')
+@extends('layouts.app')
 
 @section('content')
 <div class="container">
@@ -13,11 +13,18 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
                     {{ __('¡Has iniciado sesion!') }}
                 </div>
             </div>
         </div>
     </div>
+</div>
+
+
+<div class="container">
+
+
+
+
 </div>
 @endsection

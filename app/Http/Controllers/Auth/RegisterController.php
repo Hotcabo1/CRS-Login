@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
-use App\Models\User;
+use App\Models\Usuario;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -50,9 +50,14 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'nombre' => ['required', 'string', 'max:255'],
+            'nombreUsuario' => ['required', 'string', 'max:255', 'unique:usuarios'],
+            'password' => ['required', 'string', 'min:6', 'confirmed'],
+            'online' => ['required', 'string', 'max:2'],
+            'tipo_usuario' => ['required', 'string', 'max:2'],
+            'zona' => ['required', 'string', 'max:255'],
+            'cliente' => ['required', 'string', 'max:255'],
+            'Estatus' => ['required', 'string', 'max:255'],
         ]);
     }
 
@@ -60,14 +65,19 @@ class RegisterController extends Controller
      * Create a new user instance after a valid registration.
      *
      * @param  array  $data
-     * @return \App\Models\User
+     * @return \App\Models\Usuario
      */
     protected function create(array $data)
     {
-        return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
+        return Usuario::create([
+            'nombre' => $data['nombre'],
+            'nombreUsuario' => $data['nombreUsuario'],
+            'password' => $data['password'],
+            'online' => $data['online'],
+            'tipo_usuario' => $data['tipo_usuario'],
+            'zona' => $data['zona'],
+            'cliente' => $data['cliente'],
+            'Estatus' => $data['Estatus'],
         ]);
     }
 }
