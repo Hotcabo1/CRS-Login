@@ -2,9 +2,16 @@
 
 namespace App\Http\Controllers\Auth;
 
+
+use Illuminate\Http\Request;
+use App\Models\Usuario;
+
+use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+
+
 
 class LoginController extends Controller
 {
@@ -36,5 +43,20 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
+    }
+
+    protected function attemptLogin(Request $request)
+        {
+            
+        $usuario = Usuario::where('nombreUsuario', $request->nombreUsuario)
+                        ->where('password', $request->password)
+                        ->first();
+
+        if(!isset($usuario)){
+            return false;
+        }
+        
+        return Auth::login($usuario);
+
     }
 }
