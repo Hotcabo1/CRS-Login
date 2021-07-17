@@ -14,7 +14,7 @@
     <script src="{{ asset('plugins/nicescroll/nicescroll.js') }}"></script>
     <script src="{{ asset('plugins/currency/currency.js') }}"></script>
 
-    <script>
+    {{-- <script>
         function noty(msg, option = 1){
             Snackbar.show({
                 text: msg.toUpperCase(),
@@ -24,6 +24,6 @@
                 pos: 'top-right'
             });
         }
-    </script>
+    </script> --}}
 
 @livewireScripts

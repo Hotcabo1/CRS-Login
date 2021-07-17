@@ -5,8 +5,8 @@
         <ul class="navbar-item flex-row">
             <li class="nav-item text-center">
                 <a href="index.html">
-                    <img width="80" src="assets/img/crs-logo.png" class="navbar-logo" alt="logo">
-                    <b style="font-weight: 2rem; border:Blue; color:gray;">DASHBOARD CRS <b>-</b></b>
+                    <img width="60" src="assets/img/crs-logo.png" class="navbar-logo" alt="logo">
+                    <b style="font-weight: 2rem; border:Blue; color:gray;"> DASHBOARD CRS </b>
                 </a>
             </li>
         </ul>
@@ -133,10 +133,13 @@
 
                      <div class="dropdown-item">
                     {{-- <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown"> --}}
-                        <a class="dropdown-item" href="{{ route('logout') }}"  onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                        <a class="dropdown-item" href="{{ route('logout') }}"
+                         onclick="event.preventDefault();
+                          document.getElementById('logout-form').submit();">
 
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-log-out"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg> <span>
                             {{ __('Cerrar Sesion') }}
+
                         </span>
 
                         </a>

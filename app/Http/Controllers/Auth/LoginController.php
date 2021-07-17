@@ -3,8 +3,8 @@
 namespace App\Http\Controllers\Auth;
 
 
-use Illuminate\Http\Request;
 use App\Models\Usuario;
+use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
@@ -47,7 +47,7 @@ class LoginController extends Controller
 
     protected function attemptLogin(Request $request)
         {
-            
+
         $usuario = Usuario::where('nombreUsuario', $request->nombreUsuario)
                         ->where('password', $request->password)
                         ->first();
@@ -55,7 +55,7 @@ class LoginController extends Controller
         if(!isset($usuario)){
             return false;
         }
-        
+
         return Auth::login($usuario);
 
     }

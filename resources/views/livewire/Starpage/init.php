@@ -19,27 +19,44 @@
                     <table class="table table-botfrtrf table striped mt-1">
                         <thead class="text-white" style="background: #383F5C;">
                             <tr>
-                                <th class="table-th text-white">DESCRIPCION</th>
-                                <th class="table-th text-white">DESCRIPCION</th>
-                                <th class="table-th text-white">DESCRIPCION</th>
+                                <th class="table-th text-white">#</th>
+                                <th class="table-th text-white">Nomnbre</th>
+                                <th class="table-th text-white">Usuario</th>
+                                <th class="table-th text-white">Contraseña</th>
+                                <th class="table-th text-white">Online</th>
+                                <th class="table-th text-white">Tipo Usuario</th>
+                                <th class="table-th text-white">Zona</th>
+                                <th class="table-th text-white">Cliente</th>
+                                <th class="table-th text-white">Estatus</th>
                             </tr>
+                            <tbody>
+                                <td><tr><h6>1</h6></tr></td>
+                                <td class="text-center">
+                                    <a href="javascript:void(0)" class="btn btn-dark mtmobile" title="Edit">
+                                    <i class="fas fa-edit"></i>
+
+                                </a>
+                                <a href="javascript:void(0)" class="btn btn-dark " title="Delete">
+
+                                    <i class="fas fa-trash"></i>
+
+                                </a>
+                                </td>
+                            </tbody>
                         </thead>
                     </table>
+                    Pagination
                 </div>
-
             </div>
-
-
-
- <div class="wiget-<div class="modal" tabindex="-1" role="dialog">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>"></div>
-        </div>
     </div>
+
+Include Form
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded' function(){
+        
+    });
+
+
+</script>
