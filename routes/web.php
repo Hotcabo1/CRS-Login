@@ -17,8 +17,12 @@ Route::get('/', function () {
     return view('auth.login');
 });
 
+// return redirect()->action(
+//     [UserController::class, 'login'], ['id' => 1]
+// );
 
-
+// use App\Http\Controllers\API\ApiController;
+// return redirect()->action([ApiController::class, 'login']);
 
 
 Auth::routes();
